@@ -4,8 +4,8 @@
 
 #define N 1000000	//is how many times the test is done
 
-void noChangeDoor (int* results); // function that reiterates n-times without changing door and writes results on array
-void changeDoor (int* results); // function that reiterates n-times that changes door and writes results on arrray
+void noChangeDoor (int* results); // function that reiterates n-times without changing door and writes results on variable
+void changeDoor (int* results); // function that reiterates n-times that changes door and writes results on variable
 int menu();
 
 
@@ -82,10 +82,10 @@ void changeDoor(int* results)
 	}//the conductor can't reveal the car or the first choice
 	doors[reveal] = 2; //2 means that the door has been revealed
 	int secondChoice = rand() % 3;
-	while (doors[secondChoice] == 2) {
+	while (doors[secondChoice] == 2 || secondChoice == firstChoice) { //cannot chose the revealed door or the first guess
 		secondChoice = rand() % 3;
 	}// the second choice can't be the revealed door
-	if (doors[secondChoice] == 1) {
+	if (doors[secondChoice] == 1) {	
 		(*results)++;
 	}
 	return;
