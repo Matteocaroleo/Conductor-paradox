@@ -1,11 +1,31 @@
+/** \file Origine.cpp
+	\brief Demonstrating the conductor paradox (or Monty Hall paradox)
+
+	Details.
+*/
+
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
 
 #define N 1000000	//is how many times the test is done
 
-void noChangeDoor (int* results); // function that reiterates n-times without changing door and writes results on variable
-void changeDoor (int* results); // function that reiterates n-times that changes door and writes results on variable
+/** @brief Simulates playing the game without ever changing door
+	@param results is the memory location where the result is stored
+	@return returns nothing, it directly writes in the memory location
+*/
+
+void noChangeDoor (int* results);
+
+/** @brief Simulates playing the game by always changing door
+	@param results is the memory location where the result is stored
+	@return returns nothing, it directly writes in the memory location
+*/
+void changeDoor (int* results); 
+
+/** @brief Simple menu function, generates the user interface
+	@return the return is used to clear the buffer if any unexpected characters get typed
+*/
 int menu();
 
 
