@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['n_2',['N',['../Origine_8cpp.html#a0240ac851181b84ac374872dc5434ee4',1,'Origine.cpp']]],
-  ['nochangedoor_3',['noChangeDoor',['../Origine_8cpp.html#afac4ceb800e43a186272f60f4691f1ab',1,'Origine.cpp']]]
+  ['menu_2',['menu',['../MontyHall_8h.html#ae83fcdbeb2b6757fc741ae953b633ee1',1,'menu():&#160;Origine.cpp'],['../Origine_8cpp.html#ae83fcdbeb2b6757fc741ae953b633ee1',1,'menu():&#160;Origine.cpp']]],
+  ['montyhall_2eh_3',['MontyHall.h',['../MontyHall_8h.html',1,'']]]
 ];
