@@ -1,32 +1,23 @@
-/** \file Origine.cpp
-	\brief Demonstrating the conductor paradox (or Monty Hall paradox)
+/** @file Origine.cpp
+	@brief Demonstrating the conductor paradox (or Monty Hall paradox)
 
-	Details.
+*/
+
+/** @mainpage Index Page
+	@section intro_sec Introduction
+	The programs aims at demostrating via simple cpu power the Monty Hall paradox.
 */
 
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include "MontyHall.h"
 
+/** @short This is the number of iteration that the program simulates
+	
+*/
 #define N 1000000	//is how many times the test is done
 
-/** @brief Simulates playing the game without ever changing door
-	@param results is the memory location where the result is stored
-	@return returns nothing, it directly writes in the memory location
-*/
-
-void noChangeDoor (int* results);
-
-/** @brief Simulates playing the game by always changing door
-	@param results is the memory location where the result is stored
-	@return returns nothing, it directly writes in the memory location
-*/
-void changeDoor (int* results); 
-
-/** @brief Simple menu function, generates the user interface
-	@return the return is used to clear the buffer if any unexpected characters get typed
-*/
-int menu();
 
 
 void main()
@@ -60,7 +51,7 @@ void main()
 			break;
 
 		}
-		printf("Out of %i iterations, it guessed right %i times.\n",N, result);
+		printf("Out of %i iterations, it guessed right %i times. (%i%% )\n\n", N, result, percentageOfSuccess(result));
 	}
 	return;
 }
@@ -70,7 +61,7 @@ int menu()
 	int c = 0;
 	printf("Enter 1 for playing without ever changing door : \
 			\nEnter 2 for playing changing door:\
-			\nEnter 3 to close the program ");
+			\nEnter 3 to close the program: ");
 	scanf_s("%i", &c);
 	return c;
 }
@@ -110,4 +101,12 @@ void changeDoor(int* results)
 	}
 	return;
 }
+
+int percentageOfSuccess(int result)
+{
+	return (result * 100) / N;
+
+}
+
+
 
