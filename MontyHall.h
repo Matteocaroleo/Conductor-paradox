@@ -1,3 +1,6 @@
+
+#pragma once
+
 /** @file MontyHall.h
 	@brief Header related to Origine.cpp
 
@@ -19,10 +22,9 @@ void changeDoor(int* results);
 /** @brief Calculates the percentage of successful guesses. The total number of tests is supposed to be a costant.
 	@return Returns the percentage
 */
-int percentageOfSuccess(int occurrences);
+int percentageOfSuccess(int n, int occurrences);
 
 /** @brief Simple menu function, generates the user interface
 	@return the return is used to clear the buffer if any unexpected characters get typed
 */
 int menu();
-#pragma once
